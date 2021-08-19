@@ -6,6 +6,8 @@ INSERT INTO `items` (`name`, `label`, `weight`, `rare`, `can_remove`) VALUES
 	('apple', 'Apple', 1, 0, 1),
 	('corn', 'Corn', 1, 0, 1),
 	('ginseng', 'Ginseng', 1, 0, 1),
+	('beet', 'Beet', 1, 0, 1),
+	('peach', 'Peach', 1, 0, 1),
 	('horse_syringe', 'Horse Syringe', 1, 1, 1),
 	('horse_ointment', 'Horse Ointment', 1, 1, 1)
 ;
