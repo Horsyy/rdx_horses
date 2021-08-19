@@ -52,7 +52,7 @@ AddEventHandler('rdx_horses:Ointment', function(increase)
 end)
 
 RegisterNetEvent('rdx_horses:ConsumeFood')
-AddEventHandler('rdx_horses:ConsumeFood', function(item, increase)
+AddEventHandler('rdx_horses:ConsumeFood', function(item, item_prop, increase)
     local player = PlayerPedId()
     local horse = GetLastMount(player)
     local coords = GetEntityCoords(player)
@@ -60,9 +60,9 @@ AddEventHandler('rdx_horses:ConsumeFood', function(item, increase)
     local distance = #(coords - coordshorse)
 
 	if distance < 2.0 then        
-		ConsumeFood(player, horse, item, increase)
+		ConsumeFood(player, horse, item, item_prop, increase)
     elseif IsPedOnMount(player) then
-		ConsumeFood(player, horse, item, increase)
+		ConsumeFood(player, horse, item, item_prop, increase)
     end
 end)
 
@@ -101,9 +101,9 @@ function Ointment(player, horse, increase)
     Citizen.InvokeNative(0xC6258F41D86676E0, horse, 1, newStamina)
 end
 
-function ConsumeFood(player, horse, item, increase)
+function ConsumeFood(player, horse, item, item_prop, increase)
     TriggerServerEvent('rdx_horses:ConsumeFood', item)
-    Citizen.InvokeNative(0xCD181A959CFDD7F4, player, horse, -224471938, 0, 0)
+	Citizen.InvokeNative(0xCD181A959CFDD7F4, player, horse, GetHashKey('Interaction_Food'), GetHashKey(item_prop), 1)
     Wait(5000)
     PlaySoundFrontend('Core_Fill_Up', 'Consumption_Sounds', true, 0)
     local Health = GetAttributeCoreValue(horse, 0)
