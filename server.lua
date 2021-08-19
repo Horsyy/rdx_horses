@@ -17,28 +17,28 @@ RDX.RegisterUsableItem('horse_ointment', function(source)
 	TriggerClientEvent('rdx_horses:Ointment', source, Config.Ointment)
 end)
 
-RDX.RegisterUsableItem('wildcarrot', function(source)
-	TriggerClientEvent('rdx_horses:ConsumeFood', source, 'wildcarrot', Config.WildCarrot)
+RDX.RegisterUsableItem('apple', function(source)
+	TriggerClientEvent('rdx_horses:ConsumeFood', source, 'apple', 'p_apple02x', Config.Apple)
 end)
 
-RDX.RegisterUsableItem('apple', function(source)
-	TriggerClientEvent('rdx_horses:ConsumeFood', source, 'apple', Config.Apple)
+RDX.RegisterUsableItem('wildcarrot', function(source)
+	TriggerClientEvent('rdx_horses:ConsumeFood', source, 'wildcarrot', 'p_carrots_03x', Config.WildCarrot)
 end)
 
 RDX.RegisterUsableItem('corn', function(source)
-	TriggerClientEvent('rdx_horses:ConsumeFood', source, 'corn', Config.Corn)
+	TriggerClientEvent('rdx_horses:ConsumeFood', source, 'corn', 'p_corn02x', Config.Corn)
 end)
 
 RDX.RegisterUsableItem('ginseng', function(source)
-	TriggerClientEvent('rdx_horses:ConsumeFood', source, 'ginseng', Config.Ginseng)
+	TriggerClientEvent('rdx_horses:ConsumeFood', source, 'ginseng', 's_inv_alaskanginseng01cx', Config.Ginseng)
 end)
 
-RDX.RegisterUsableItem('beets', function(source)
-	TriggerClientEvent('rdx_horses:ConsumeFood', source, 'beets', Config.Beets)
+RDX.RegisterUsableItem('beet', function(source)
+	TriggerClientEvent('rdx_horses:ConsumeFood', source, 'beet', 'p_beet_01x', Config.Beet)
 end)
 
 RDX.RegisterUsableItem('peach', function(source)
-	TriggerClientEvent('rdx_horses:ConsumeFood', source, 'peach', Config.Peach)
+	TriggerClientEvent('rdx_horses:ConsumeFood', source, 'peach', 's_peach01x', Config.Peach)
 end)
 
 --------------------------
